@@ -1,6 +1,6 @@
 # GizmoSize
 
-[![GitHub license](https://img.shields.io/github/license/L0Lock/GizmoSize?style=flat-square)](https://github.com/L0Lock/GizmoSize/blob/master/LICENSE) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H818FHX)
+[![GitHub license](https://img.shields.io/github/license/L0Lock/GizmoSize?style=for-the-badge)](https://github.com/L0Lock/GizmoSize/blob/master/LICENSE) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H818FHX)
 
 Allows you to increase or decrease the Gizmo size from the viewport using keyboard shortcuts and more.
 
