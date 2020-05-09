@@ -24,8 +24,8 @@ bl_info = {
     "blender": (2, 82, 7),
     "location": "View3D → Header → View → Gizmo",
     "warning": "",
-    "wiki_url": "not yet",
-    "tracker_url": "not yet",
+    "wiki_url": "https://github.com/L0Lock/GizmoSize",
+    "tracker_url": "https://github.com/L0Lock/GizmoSize/issues",
     "category": "3D View"
 }
 
