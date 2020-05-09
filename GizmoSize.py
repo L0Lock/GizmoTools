@@ -20,7 +20,7 @@ bl_info = {
     "name": "Gizmo Size",
     "description": "Allows you to increase or decrease the Gizmo size using keyboard shortcuts.",
     "author": "Loïc \"L0Lock\" Dautry",
-    "version": (0, 0, 2),
+    "version": (0, 0, 3),
     "blender": (2, 82, 7),
     "location": "View3D → Header → View → Gizmo",
     "warning": "",
