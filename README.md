@@ -31,3 +31,9 @@ Allows you to increase or decrease the Gizmo size from the viewport using keyboa
 - Click the "install" button and select GizmoSize.py
 
 - Check *Gizmo Size* in the addon list
+
+## To-do list
+
+- make it work outside of viewport. Right now you have to use is from the viewport to resize other editor's gizmo
+
+- have the shortcuts settings in the addon's preferences
