@@ -6,7 +6,7 @@ Allows you to increase or decrease the Gizmo size from the viewport using keyboa
 
 ## Features
 
-**Two new operators allow you to increase and decrease the Gizmo size, assigned to <kbd>PageUp</kbd> and <kbd>PageDown</kbd> keys:**
+**Two new operators allow you to increase and decrease the Gizmo size, assigned to <kbd>⇞</kbd> and <kbd>⇟</kbd> keys:**
 
 ![Demo Gizmo](https://i.imgur.com/DmhuwMN.gif)
 
