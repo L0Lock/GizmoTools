@@ -20,13 +20,13 @@ bl_info = {
     "name": "Gizmo Size",
     "description": "Allows you to increase or decrease the Gizmo size using keyboard shortcuts.",
     "author": "Loïc \"L0Lock\" Dautry",
-    "version": (0, 0, 3),
+    "version": (0, 0, 4),
     "blender": (2, 82, 7),
-    "location": "View3D → Header → View → Gizmo",
-    "warning": "",
+    "location": "View3D/UV Editor → Header → View → Gizmo",
+    "warning": "Under development.",
     "wiki_url": "https://github.com/L0Lock/GizmoSize",
     "tracker_url": "https://github.com/L0Lock/GizmoSize/issues",
-    "category": "3D View"
+    "category": "Interface"
 }
 
 import bpy
@@ -144,9 +144,9 @@ def register():
     wm = bpy.context.window_manager
     kc = wm.keyconfigs.addon
     if kc:
-        km = kc.keymaps.new(name='3D View', space_type='VIEW_3D')
+        km = kc.keymaps.new(name='Window', region_type='WINDOW', space_type='EMPTY')
         kmi = km.keymap_items.new("view3d.decease_gizmo_size", type='PAGE_DOWN', value='PRESS')
-        km = kc.keymaps.new(name='3D View', space_type='VIEW_3D')
+        km = kc.keymaps.new(name='Window', region_type='WINDOW', space_type='EMPTY')
         kmi = km.keymap_items.new("view3d.incease_gizmo_size", type='PAGE_UP', value='PRESS')
         addon_keymaps.append((km, kmi))
 
