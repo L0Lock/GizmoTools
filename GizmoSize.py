@@ -139,6 +139,7 @@ def register():
     bpy.utils.register_class(VIEW3D_OT_decease_gizmo_size)
     bpy.utils.register_class(VIEW3D_MT_gizmo_size_menu)
     bpy.types.VIEW3D_MT_view.append(draw_gizmo_menu)
+    bpy.types.IMAGE_MT_view.append(draw_gizmo_menu)
     
     # Keymap reg
     wm = bpy.context.window_manager
@@ -156,6 +157,7 @@ def unregister():
     bpy.utils.unregister_class(VIEW3D_OT_decease_gizmo_size)
     bpy.utils.unregister_class(VIEW3D_MT_gizmo_size_menu)
     bpy.types.VIEW3D_MT_view.remove(draw_gizmo_menu)
+    bpy.types.IMAGE_MT_view.remove(draw_gizmo_menu)
 
     # Keymap unreg
     for km,kmi in addon_keymaps:
