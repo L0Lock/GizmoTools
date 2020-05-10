@@ -12,11 +12,13 @@ Allows you to increase or decrease the Gizmo size from the viewport using keyboa
 
 **Edit the shortcuts to your liking from the Preferences window:**
 
-![Keymap location](https://i.imgur.com/Fdo31DX.png)
+![Keymap location](https://i.imgur.com/AHWXKqT.png)
 
-**Access the operators in the viewport's new Gizmo menu:**
+**Access the operators in the new Gizmo menu:**
 
 ![Gizmo Viewport Menu](https://i.imgur.com/nS3pq1Z.png)
+
+Available in the Viewport and the UV Editor.
 
 **Set the increment value in the addon's preferences:**
 
@@ -34,6 +36,6 @@ Allows you to increase or decrease the Gizmo size from the viewport using keyboa
 
 ## To-do list
 
-- make it work outside of viewport. Right now you have to use is from the viewport to resize other editor's gizmo
+- ~~make it work outside of viewport. Right now you have to use is from the viewport to resize other editor's gizmo~~ Kind of one in 0.0.4! Not sure I can do better tho, but I'll keep investigating.
 
 - have the shortcuts settings in the addon's preferences
