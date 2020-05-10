@@ -91,7 +91,7 @@ class VIEW3D_PT_gizmo_size_preferences(AddonPreferences):
     inc : FloatProperty(
         name="Increment",
         description="Increment in px.",
-        default=10,
+        default=20,
         min=1,
         max=100,
         step=100,
