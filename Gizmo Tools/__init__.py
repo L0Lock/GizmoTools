@@ -97,8 +97,115 @@ class VIEW3D_OT_move_local_y(bpy.types.Operator):
         return context.active_object is not None
 
     def execute(self, context):
-        ot = ops.transform.translate
-        ot(value=(0, 1, 0), orient_type='LOCAL')
+        prefs = context.preferences
+        addon_prefs = prefs.addons[__name__].preferences
+        ot = bpy.ops.transform.translate
+        ot(value=(0, addon_prefs.tinc, 0), orient_type='LOCAL')
+        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
+        return {'FINISHED'}
+
+# -----------------------------------------------------------------------------
+#    Operator : Move Local nY
+# -----------------------------------------------------------------------------
+
+
+class VIEW3D_OT_move_local_ny(bpy.types.Operator):
+    bl_idname = "view3d.move_local_ny"
+    bl_label = "Move on the local -Y axis"
+
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None
+
+    def execute(self, context):
+        prefs = context.preferences
+        addon_prefs = prefs.addons[__name__].preferences
+        ot = bpy.ops.transform.translate
+        ot(value=(0, addon_prefs.tinc*-1, 0), orient_type='LOCAL')
+        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
+        return {'FINISHED'}
+
+# -----------------------------------------------------------------------------
+#    Operator : Move Local X
+# -----------------------------------------------------------------------------
+
+
+class VIEW3D_OT_move_local_x(bpy.types.Operator):
+    bl_idname = "view3d.move_local_x"
+    bl_label = "Move on the local X axis"
+
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None
+
+    def execute(self, context):
+        prefs = context.preferences
+        addon_prefs = prefs.addons[__name__].preferences
+        ot = bpy.ops.transform.translate
+        ot(value=(addon_prefs.tinc, 0, 0), orient_type='LOCAL')
+        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
+        return {'FINISHED'}
+
+# -----------------------------------------------------------------------------
+#    Operator : Move Local nX
+# -----------------------------------------------------------------------------
+
+
+class VIEW3D_OT_move_local_nx(bpy.types.Operator):
+    bl_idname = "view3d.move_local_nx"
+    bl_label = "Move on the local -X axis"
+
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None
+
+    def execute(self, context):
+        prefs = context.preferences
+        addon_prefs = prefs.addons[__name__].preferences
+        ot = bpy.ops.transform.translate
+        ot(value=(addon_prefs.tinc*-1, 0, 0), orient_type='LOCAL')
+        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
+        return {'FINISHED'}
+
+# -----------------------------------------------------------------------------
+#    Operator : Move Local Z
+# -----------------------------------------------------------------------------
+
+
+class VIEW3D_OT_move_local_z(bpy.types.Operator):
+    bl_idname = "view3d.move_local_z"
+    bl_label = "Move on the local Z axis"
+
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None
+
+    def execute(self, context):
+        prefs = context.preferences
+        addon_prefs = prefs.addons[__name__].preferences
+        ot = bpy.ops.transform.translate
+        ot(value=(0, 0, addon_prefs.tinc), orient_type='LOCAL')
+        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
+        return {'FINISHED'}
+
+# -----------------------------------------------------------------------------
+#    Operator : Move Local nZ
+# -----------------------------------------------------------------------------
+
+
+class VIEW3D_OT_move_local_nz(bpy.types.Operator):
+    bl_idname = "view3d.move_local_nz"
+    bl_label = "Move on the local -Z axis"
+
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None
+
+    def execute(self, context):
+        prefs = context.preferences
+        addon_prefs = prefs.addons[__name__].preferences
+        ot = bpy.ops.transform.translate
+        ot(value=(0, 0, addon_prefs.tinc*-1), orient_type='LOCAL')
         # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
@@ -110,25 +217,38 @@ class VIEW3D_OT_move_local_y(bpy.types.Operator):
 class VIEW3D_PT_gizmo_size_preferences(AddonPreferences):
     bl_idname = __name__
 
-    # Increment value
+    # Gismo Size Increment value
     inc: FloatProperty(
-        name="Increment",
-        description="Increment in px.",
+        name="Gizmo Increment",
+        description="Gizmo Size Increment in px",
         default=20,
         min=1,
-        max=100,
+        soft_max=100,
         step=100,
         precision=0,
         subtype="PIXEL"
     )
 
+    # Transform Increment value
+    tinc: FloatProperty(
+        name="Transform Increment",
+        description="Transform Increment",
+        default=0.01,
+        soft_min=0,
+        soft_max=100,
+        step=1,
+        precision=3,
+    )
+
     # Draws addon preferences
+
     def draw(self, context):
         layout = self.layout
 
         # Increment value
         row = layout.row(align=True)
         row.prop(self, "inc", toggle=True)
+        row.prop(self, "tinc", toggle=True)
 
 # -----------------------------------------------------------------------------
 #    Gizmo Menu
@@ -160,12 +280,25 @@ addon_keymaps = []
 #    Register
 # -----------------------------------------------------------------------------
 
+classes = (
+    VIEW3D_PT_gizmo_size_preferences,
+    VIEW3D_OT_incease_gizmo_size,
+    VIEW3D_OT_decease_gizmo_size,
+    VIEW3D_MT_gizmo_size_menu,
+    VIEW3D_OT_move_local_y,
+    VIEW3D_OT_move_local_ny,
+    VIEW3D_OT_move_local_x,
+    VIEW3D_OT_move_local_nx,
+    VIEW3D_OT_move_local_z,
+    VIEW3D_OT_move_local_nz,
+)
+
+
 def register():
-    bpy.utils.register_class(VIEW3D_PT_gizmo_size_preferences)
-    bpy.utils.register_class(VIEW3D_OT_incease_gizmo_size)
-    bpy.utils.register_class(VIEW3D_OT_decease_gizmo_size)
-    bpy.utils.register_class(VIEW3D_MT_gizmo_size_menu)
-    bpy.utils.register_class(VIEW3D_PT_gizmo_size_preferences)
+    from bpy.utils import register_class
+    for cls in classes:
+        register_class(cls)
+
     bpy.types.VIEW3D_MT_view.append(draw_gizmo_menu)
     bpy.types.IMAGE_MT_view.append(draw_gizmo_menu)
 
@@ -176,20 +309,43 @@ def register():
         km = kc.keymaps.new(
             name='Window', region_type='WINDOW', space_type='EMPTY')
         kmi = km.keymap_items.new(
+            "view3d.incease_gizmo_size", type='PAGE_UP', value='PRESS')
+        km = kc.keymaps.new(
+            name='Window', region_type='WINDOW', space_type='EMPTY')
+        kmi = km.keymap_items.new(
             "view3d.decease_gizmo_size", type='PAGE_DOWN', value='PRESS')
         km = kc.keymaps.new(
             name='Window', region_type='WINDOW', space_type='EMPTY')
         kmi = km.keymap_items.new(
-            "view3d.incease_gizmo_size", type='PAGE_UP', value='PRESS')
+            "view3d.move_local_y", type='UP_ARROW', alt=True, value='PRESS')
+        km = kc.keymaps.new(
+            name='Window', region_type='WINDOW', space_type='EMPTY')
+        kmi = km.keymap_items.new(
+            "view3d.move_local_ny", type='DOWN_ARROW', alt=True, value='PRESS')
+        km = kc.keymaps.new(
+            name='Window', region_type='WINDOW', space_type='EMPTY')
+        kmi = km.keymap_items.new(
+            "view3d.move_local_x", type='RIGHT_ARROW', alt=True, value='PRESS')
+        km = kc.keymaps.new(
+            name='Window', region_type='WINDOW', space_type='EMPTY')
+        kmi = km.keymap_items.new(
+            "view3d.move_local_nx", type='LEFT_ARROW', alt=True, value='PRESS')
+        km = kc.keymaps.new(
+            name='Window', region_type='WINDOW', space_type='EMPTY')
+        kmi = km.keymap_items.new(
+            "view3d.move_local_z", type='PAGE_UP', alt=True, value='PRESS')
+        km = kc.keymaps.new(
+            name='Window', region_type='WINDOW', space_type='EMPTY')
+        kmi = km.keymap_items.new(
+            "view3d.move_local_nz", type='PAGE_DOWN', alt=True, value='PRESS')
         addon_keymaps.append((km, kmi))
 
 
 def unregister():
-    bpy.utils.unregister_class(VIEW3D_PT_gizmo_size_preferences)
-    bpy.utils.unregister_class(VIEW3D_OT_incease_gizmo_size)
-    bpy.utils.unregister_class(VIEW3D_OT_decease_gizmo_size)
-    bpy.utils.unregister_class(VIEW3D_MT_gizmo_size_menu)
-    bpy.utils.unregister_class(VIEW3D_PT_gizmo_size_preferences)
+    from bpy.utils import unregister_class
+    for cls in reversed(classes):
+        unregister_class(cls)
+
     bpy.types.VIEW3D_MT_view.remove(draw_gizmo_menu)
     bpy.types.IMAGE_MT_view.remove(draw_gizmo_menu)
 
