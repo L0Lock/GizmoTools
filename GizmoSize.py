@@ -79,7 +79,24 @@ class VIEW3D_OT_incease_gizmo_size(bpy.types.Operator):
         view.gizmo_size = gs
         print ("New Gizmo size =", gs)
         return {'FINISHED'}
+    
+# -----------------------------------------------------------------------------
+#    Operator : Move Local Y   
+# -----------------------------------------------------------------------------  
 
+class VIEW3D_OT_move_local_y(bpy.types.Operator):
+    bl_idname = "view3d.move_local_y"
+    bl_label = "Move on the local Y axis"
+    
+    @classmethod
+    def poll(cls, context):
+        return context.active_object is not None
+    
+    def execute(self, context):
+        ot = ops.transform.translate
+        ot(value=(0,1,0), orient_type='LOCAL')  
+        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')        
+        return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
 #    Preferences      
@@ -138,6 +155,7 @@ def register():
     bpy.utils.register_class(VIEW3D_OT_incease_gizmo_size)
     bpy.utils.register_class(VIEW3D_OT_decease_gizmo_size)
     bpy.utils.register_class(VIEW3D_MT_gizmo_size_menu)
+    bpy.utils.register_class(VIEW3D_PT_gizmo_size_preferences)
     bpy.types.VIEW3D_MT_view.append(draw_gizmo_menu)
     bpy.types.IMAGE_MT_view.append(draw_gizmo_menu)
     
@@ -156,6 +174,7 @@ def unregister():
     bpy.utils.unregister_class(VIEW3D_OT_incease_gizmo_size)
     bpy.utils.unregister_class(VIEW3D_OT_decease_gizmo_size)
     bpy.utils.unregister_class(VIEW3D_MT_gizmo_size_menu)
+    bpy.utils.unregister_class(VIEW3D_PT_gizmo_size_preferences)
     bpy.types.VIEW3D_MT_view.remove(draw_gizmo_menu)
     bpy.types.IMAGE_MT_view.remove(draw_gizmo_menu)
 
