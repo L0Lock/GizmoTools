@@ -8,11 +8,11 @@ Allows you to perform simple gizmo actions using keyboard shortcuts.
 
 **Increase and decrease the Gizmo size, using <kbd>⇞</kbd> and <kbd>⇟</kbd> keys:**
 
-![Demo Gizmo](Prez\Gizmo Size Demo.gif)
+![Demo Gizmo](Prez\Gizmo_Size_Demo.gif)
 
 **Rotate and Translate using keys:**
 
-![Demo Gizmo](Prez\Gizmo Transform Demo.gif)
+![Demo Gizmo](Prez\Gizmo_Transform_Demo.gif)
 
 - Translation mode: <kbd>&#9095; Alt</kbd>
 - Rotation mode: <kbd>&#9095; Alt</kbd><kbd>&#8679; Shift</kbd>
@@ -22,17 +22,17 @@ Allows you to perform simple gizmo actions using keyboard shortcuts.
 
 **Edit the shortcuts to your liking from the Preferences window:**
 
-![Keymap location](Prez\Keymap Menu.jpg)
+![Keymap location](Prez\Keymap_Menu.jpg)
 
 **Access the operators in the new Gizmo menu:**
 
-![Gizmo Viewport Menu](Prez\Gizmo Menu.jpg)
+![Gizmo Viewport Menu](Prez\Gizmo_Menu.jpg)
 
 Available in the Viewport and the UV Editor.
 
 **Set the increment value in the addon's preferences:**
 
-![Increment setting](Prez\Addons Preferences.jpg)
+![Increment setting](Prez\Addons_Preferences.jpg)
 
 ## Installation
 
