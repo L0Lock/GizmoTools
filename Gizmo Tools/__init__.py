@@ -29,7 +29,7 @@ bl_info = {
     "name": "Gizmo Tools",
     "description": "Allows you to do simple gizmo operations using keyboard shortcuts.",
     "author": "Loïc \"L0Lock\" Dautry",
-    "version": (0, 1, 0),
+    "version": (0, 1, 1),
     "blender": (2, 83, 0),
     "location": "View3D/UV Editor → Header → View → Gizmo",
     "warning": "Under development.",
@@ -218,7 +218,7 @@ class VIEW3D_OT_move_local_nz(bpy.types.Operator):
 
 class VIEW3D_OT_rotate_local_x(bpy.types.Operator):
     bl_idname = "view3d.rotate_local_x"
-    bl_label = "Move on the local X axis"
+    bl_label = "Rotate on the local X axis"
 
     @classmethod
     def poll(cls, context):
@@ -239,7 +239,7 @@ class VIEW3D_OT_rotate_local_x(bpy.types.Operator):
 
 class VIEW3D_OT_rotate_local_nx(bpy.types.Operator):
     bl_idname = "view3d.rotate_local_nx"
-    bl_label = "Move on the local -X axis"
+    bl_label = "Rotate on the local -X axis"
 
     @classmethod
     def poll(cls, context):
@@ -260,7 +260,7 @@ class VIEW3D_OT_rotate_local_nx(bpy.types.Operator):
 
 class VIEW3D_OT_rotate_local_y(bpy.types.Operator):
     bl_idname = "view3d.rotate_local_y"
-    bl_label = "Move on the local Y axis"
+    bl_label = "Rotate on the local Y axis"
 
     @classmethod
     def poll(cls, context):
@@ -281,7 +281,7 @@ class VIEW3D_OT_rotate_local_y(bpy.types.Operator):
 
 class VIEW3D_OT_rotate_local_ny(bpy.types.Operator):
     bl_idname = "view3d.rotate_local_ny"
-    bl_label = "Move on the local -Y axis"
+    bl_label = "Rotate on the local -Y axis"
 
     @classmethod
     def poll(cls, context):
@@ -302,7 +302,7 @@ class VIEW3D_OT_rotate_local_ny(bpy.types.Operator):
 
 class VIEW3D_OT_rotate_local_z(bpy.types.Operator):
     bl_idname = "view3d.rotate_local_z"
-    bl_label = "Move on the local Z axis"
+    bl_label = "Rotate on the local Z axis"
 
     @classmethod
     def poll(cls, context):
@@ -323,7 +323,7 @@ class VIEW3D_OT_rotate_local_z(bpy.types.Operator):
 
 class VIEW3D_OT_rotate_local_nz(bpy.types.Operator):
     bl_idname = "view3d.rotate_local_nz"
-    bl_label = "Move on the local -Z axis"
+    bl_label = "Rotate on the local -Z axis"
 
     @classmethod
     def poll(cls, context):
