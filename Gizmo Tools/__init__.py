@@ -26,15 +26,15 @@ import rna_keymap_ui
 import bpy
 from math import radians
 bl_info = {
-    "name": "Gizmo Size",
-    "description": "Allows you to increase or decrease the Gizmo size using keyboard shortcuts.",
+    "name": "Gizmo Tools",
+    "description": "Allows you to do simple gizmo operations using keyboard shortcuts.",
     "author": "Loïc \"L0Lock\" Dautry",
     "version": (0, 1, 0),
     "blender": (2, 83, 0),
     "location": "View3D/UV Editor → Header → View → Gizmo",
     "warning": "Under development.",
-    "wiki_url": "https://github.com/L0Lock/GizmoSize",
-    "tracker_url": "https://github.com/L0Lock/GizmoSize/issues",
+    "wiki_url": "https://github.com/L0Lock/GizmoTools",
+    "tracker_url": "https://github.com/L0Lock/GizmoTools/issues",
     "category": "Interface"
 }
 
