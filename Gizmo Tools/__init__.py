@@ -55,7 +55,7 @@ class VIEW3D_OT_decease_gizmo_size(bpy.types.Operator):
         print("Gizmo size =", gs)
         print("Increment =", addon_prefs.inc)
 
-        gs = gs - addon_prefs.inc
+        gs -= addon_prefs.inc
         view.gizmo_size = gs
         print("New Gizmo size =", gs)
         return {'FINISHED'}
@@ -78,7 +78,7 @@ class VIEW3D_OT_incease_gizmo_size(bpy.types.Operator):
         print("Gizmo size =", gs)
         print("Increment =", addon_prefs.inc)
 
-        gs = gs + addon_prefs.inc
+        gs += addon_prefs.inc
         view.gizmo_size = gs
         print("New Gizmo size =", gs)
         return {'FINISHED'}
