@@ -8,25 +8,25 @@ Allows you to increase or decrease the Gizmo size from the viewport using keyboa
 
 **Two new operators allow you to increase and decrease the Gizmo size, assigned to <kbd>⇞</kbd> and <kbd>⇟</kbd> keys:**
 
-![Demo Gizmo](https://i.imgur.com/DmhuwMN.gif)
+![Demo Gizmo](Prez\Gizmo Size Demo.gif)
 
 **Edit the shortcuts to your liking from the Preferences window:**
 
-![Keymap location](https://i.imgur.com/AHWXKqT.png)
+![Keymap location](Prez\Keymap Menu.jpg)
 
 **Access the operators in the new Gizmo menu:**
 
-![Gizmo Viewport Menu](https://i.imgur.com/nS3pq1Z.png)
+![Gizmo Viewport Menu](Prez\Gizmo Menu.jpg)
 
 Available in the Viewport and the UV Editor.
 
 **Set the increment value in the addon's preferences:**
 
-![Increment setting](https://i.imgur.com/PihtIS0.png)
+![Increment setting](Prez\Addons Preferences.jpg)
 
 ## Installation
 
-- download [GizmoSize.py](GizmoSize.py)
+- download the [latest release](/releases/latest)
 
 - Go in the Preferences window, Add-ons Tab
 
@@ -35,7 +35,5 @@ Available in the Viewport and the UV Editor.
 - Check *Gizmo Size* in the addon list
 
 ## To-do list
-
-- ~~make it work outside of viewport. Right now you have to use is from the viewport to resize other editor's gizmo~~ Kind of one in 0.0.4! Not sure I can do better tho, but I'll keep investigating.
 
 - have the shortcuts settings in the addon's preferences
