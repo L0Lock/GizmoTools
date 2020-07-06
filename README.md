@@ -36,7 +36,7 @@ Available in the Viewport and the UV Editor.
 
 ## Installation
 
-- download the [latest release](/releases/latest)
+- download the [latest release](https://github.com/L0Lock/GizmoTools/releases/latest)
 
 - Go in the Preferences window, Add-ons Tab
 
