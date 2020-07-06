@@ -1,6 +1,6 @@
 # GizmoTools
 
-[![GitHub license](https://img.shields.io/github/license/L0Lock/GizmoTools?style=for-the-badge)](https://github.com/L0Lock/GizmoTools/blob/master/LICENSE) [![ko-fi](Prez/SupportOnKofi.jpg)](https://ko-fi.com/l0lock) [![uTip](Prez/SupportOnUtip.jpg)](https://www.utip.io/l0lock)  
+[![GitHub license](https://img.shields.io/github/license/L0Lock/GizmoTools?style=for-the-badge)](https://github.com/L0Lock/GizmoTools/blob/master/LICENSE) [![ko-fi](Prez/SupportOnKofi.jpg)](https://ko-fi.com/l0lock) [![uTip](Prez/SupportOnUtip.jpg)](https://www.utip.io/l0lock) [![PayPal](Prez/SupportOnPaypal.jpg)](https://www.paypal.me/DautryL)  
 [![ArtStation](Prez/BuyOnArtstation.jpg)](https://artstn.co/m/276y)  [![Gumroad](Prez/BuyOnGumroad.jpg)](https://gum.co/gizmotools)
 
 Allows you to perform simple gizmo actions using keyboard shortcuts.
