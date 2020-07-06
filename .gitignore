@@ -1,2 +1,3 @@
 *.zip
 Gizmo Tools/__pycache__/
+*.URL
