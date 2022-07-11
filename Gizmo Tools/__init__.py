@@ -29,8 +29,8 @@ bl_info = {
     "name": "Gizmo Tools",
     "description": "Allows you to do simple gizmo operations using keyboard shortcuts.",
     "author": "Loïc \"L0Lock\" Dautry",
-    "version": (0, 1, 1),
-    "blender": (2, 83, 0),
+    "version": (0, 1, 2),
+    "blender": (3, 2, 0),
     "location": "View3D/UV Editor → Header → View → Gizmo",
     "warning": "Under development.",
     "wiki_url": "https://github.com/L0Lock/GizmoTools",
@@ -56,7 +56,7 @@ class VIEW3D_OT_decease_gizmo_size(bpy.types.Operator):
         print("Gizmo size =", gs)
         print("Increment =", addon_prefs.inc)
 
-        gs -= addon_prefs.inc
+        gs -= int(addon_prefs.inc)
         view.gizmo_size = gs
         print("New Gizmo size =", gs)
         return {'FINISHED'}
@@ -79,7 +79,7 @@ class VIEW3D_OT_incease_gizmo_size(bpy.types.Operator):
         print("Gizmo size =", gs)
         print("Increment =", addon_prefs.inc)
 
-        gs += addon_prefs.inc
+        gs += int(addon_prefs.inc)
         view.gizmo_size = gs
         print("New Gizmo size =", gs)
         return {'FINISHED'}
