@@ -103,7 +103,6 @@ class VIEW3D_OT_move_local_x(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.translate
         ot(value=(addon_prefs.tinc, 0, 0), orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -124,7 +123,6 @@ class VIEW3D_OT_move_local_nx(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.translate
         ot(value=(addon_prefs.tinc*-1, 0, 0), orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -145,7 +143,6 @@ class VIEW3D_OT_move_local_y(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.translate
         ot(value=(0, addon_prefs.tinc, 0), orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -166,7 +163,6 @@ class VIEW3D_OT_move_local_ny(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.translate
         ot(value=(0, addon_prefs.tinc*-1, 0), orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -187,7 +183,6 @@ class VIEW3D_OT_move_local_z(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.translate
         ot(value=(0, 0, addon_prefs.tinc), orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -208,7 +203,6 @@ class VIEW3D_OT_move_local_nz(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.translate
         ot(value=(0, 0, addon_prefs.tinc*-1), orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -229,7 +223,6 @@ class VIEW3D_OT_rotate_local_x(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.rotate
         ot(value=addon_prefs.rinc, orient_axis='X', orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -250,7 +243,6 @@ class VIEW3D_OT_rotate_local_nx(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.rotate
         ot(value=addon_prefs.rinc*-1, orient_axis='X', orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -271,7 +263,6 @@ class VIEW3D_OT_rotate_local_y(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.rotate
         ot(value=addon_prefs.rinc, orient_axis='Y', orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -292,7 +283,6 @@ class VIEW3D_OT_rotate_local_ny(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.rotate
         ot(value=addon_prefs.rinc*-1, orient_axis='Y', orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -313,7 +303,6 @@ class VIEW3D_OT_rotate_local_z(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.rotate
         ot(value=addon_prefs.rinc, orient_axis='Z', orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
@@ -334,7 +323,6 @@ class VIEW3D_OT_rotate_local_nz(bpy.types.Operator):
         addon_prefs = prefs.addons[__name__].preferences
         ot = bpy.ops.transform.rotate
         ot(value=addon_prefs.rinc*-1, orient_axis='Z', orient_type='LOCAL')
-        # bpy.ops.transform.translate(value=(0,1,0), orient_type='LOCAL')
         return {'FINISHED'}
 
 # -----------------------------------------------------------------------------
