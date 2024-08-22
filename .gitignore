@@ -2,3 +2,4 @@
 Gizmo Tools/__pycache__/
 *.URL
 *.lnk
+.venv/
