@@ -4,16 +4,15 @@ from bpy.props import FloatProperty
 from math import radians
 
 # -----------------------------------------------------------------------------
-#    Keymap
-# -----------------------------------------------------------------------------
-addon_keymaps = []
-
-# -----------------------------------------------------------------------------
 #    Preferences
 # -----------------------------------------------------------------------------
 
 class VIEW3D_PT_gizmo_size_preferences(AddonPreferences):
     bl_idname = __package__
+
+    # -----------------------------------------------------------------------------
+    #    Custom Properties
+    # -----------------------------------------------------------------------------
 
     # Gismo Size Increment value
     inc: FloatProperty(
@@ -50,7 +49,9 @@ class VIEW3D_PT_gizmo_size_preferences(AddonPreferences):
         subtype="ANGLE"
     ) # type: ignore
 
-    # Draws addon preferences
+    # -----------------------------------------------------------------------------
+    #    Draw addon preferences
+    # -----------------------------------------------------------------------------
 
     def draw(self, context):
         layout = self.layout
